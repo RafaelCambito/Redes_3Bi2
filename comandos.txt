@@ -14,3 +14,6 @@ docker login
 docker tag seu_usuario/nome_da_imagem:tag seu_usuario/nome_da_imagem:tag
 docker push seu_usuario/nome_da_imagem:tag
 
+#listar portas em uso no linux 
+lsof -i -n -P | grep LISTEN
+kill pid
