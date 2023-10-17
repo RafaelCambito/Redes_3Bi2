@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  db:
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ifpr
+    volumes:
+      - ./db/data:/var/lib/mysql
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+  web:
+    build: ./app
+    environment:
+      MYSQL_DATABASE: ifpr
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_HOST: db
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    restart: on-failure
