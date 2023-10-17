@@ -2,7 +2,7 @@ Atividade avaliativa referente ao 3º Bimestre de Redes - TADS - IFPR Cascavel.
 Docker e Docker Compose  
 
 - Containers e imagens:  
-   App =  rafaelcambito/node18rafael (imagem própria do Node versão 18)  
+   App =  rafaelcambito/node18rafael2 (imagem própria do Node versão 18)  
    db = MySQL  
    phpmyadmin = phpmyadmin  
 
@@ -13,6 +13,6 @@ Docker e Docker Compose
 - Execução e acesso:  
    Clonar repositório = https://github.com/RafaelCambito/Redes_3Bi.git  
    Criação containers e imagens = docker compose up  
-   NodeJs = http://localhost:8080/  (rota "/" faz um select no banco de dados, trazendo os alunos cadastrados)  
+   NodeJs = http://localhost:3000/  (rota "/" faz um select no banco de dados, trazendo os alunos cadastrados)  
    phpmyadmin = http://localhost:8080/ (gerenciador que permite acesso a base e consulta de dados).  
 
