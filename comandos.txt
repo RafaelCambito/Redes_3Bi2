@@ -16,4 +16,10 @@ docker push seu_usuario/nome_da_imagem:tag
 
 #listar portas em uso no linux 
 lsof -i -n -P | grep LISTEN
-kill pid
+kill pid  
+
+#verificar e inspecionar redes internas criadas pelo docker
+docker network ls  
+docker network inspect <ID>
+
+
